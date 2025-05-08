@@ -1,0 +1,91 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4b6cb7;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.nav-links a {
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebar,
+.content,
+.extra {
+  padding: 1rem;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+}
+
+/* Flex ratios for desktop */
+.sidebar {
+  flex: 1;
+}
+.content {
+  flex: 2;
+}
+.extra {
+  flex: 1;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Tablet styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .nav-links {
+    display: none;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 0.5rem;
+  }
+
+  .sidebar,
+  .content,
+  .extra {
+    font-size: 0.9rem;
+  }
+}
